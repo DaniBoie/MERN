@@ -1,6 +1,5 @@
 const router = require('express').Router()
 const { Discussion, Question, User } = require('../models')
-const { populate } = require('../models/Item')
 
 // GET discussions from a specific question.
 router.get('/discussions/:question_id', (req, res) => {
