@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './SignUp.css';
+import './SignUp.css'
 
 const SignUp = () => {
   const [accountState, setAccountState] = useState({
@@ -26,7 +26,7 @@ const SignUp = () => {
 
   return (
     <div className='parent'>
-      <div>
+      {/* <div>
         <h1>Create Account</h1>
         <form action='input'>
           <p>
@@ -87,11 +87,14 @@ const SignUp = () => {
             <button onClick={accountState.handleLogIn}>LOG IN!</button>
           </p>
         </form>
+      </div> */}
+      <div className='logoBox'>
+        <p className='logoText logoBackground'>P</p><p className='logoText'>IAZZA</p>
+        <p className='logoSubText'>Q&A for students</p>
       </div>
-
       <div className='btnBox'>
         <button className='signUpBtn loginFont authBtn' onClick={accountState.handleSignUp}>Get Started</button>
-        <button className='loginBtn loginFont authBtn' onClick={accountState.handleLogIn}>LOG IN!</button>
+        <button className='loginBtn loginFont authBtn' onClick={accountState.handleLogIn}>Log in</button>
       </div>
     </div>
   )

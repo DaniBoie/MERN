@@ -4,6 +4,13 @@
   grid-template-rows: repeat(4, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  background-image: url("background.jpg");
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
 }
 
 .signUpBtn {
@@ -37,4 +44,44 @@
   grid-column: 2 / span 1;
   grid-row: 4;
   justify-self: center;
+}
+
+.logoBox {
+  grid-column: 2;
+  grid-row: 2;
+  width: 740px;
+  height: 266px;
+  text-align: center;
+}
+
+.logoText {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 144px;
+  line-height: 176px;
+  letter-spacing: 0.2em;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 0px;
+  margin-top: 0px;
+  display: inline-block;
+}
+
+.logoSubText {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 78px;
+  text-align: center;
+  color: #FFFFFF;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+  margin-top: 0px;
+}
+
+.logoBackground {
+  background: #65C6FE;
+  border-radius: 19px;
+  padding-left: 25px;
 }
