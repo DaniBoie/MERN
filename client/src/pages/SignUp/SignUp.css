@@ -13,6 +13,29 @@
   /* Resize the background image to cover the entire container */
 }
 
+.authBtn:focus {
+  opacity: 1.2;
+  transition: 0s;
+}
+
+.authBtn:hover {
+  opacity: 0.6
+}
+
+.signUpBtn:active {
+  background-color: #2BB841;
+  opacity: 1;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.loginBtn:active {
+  background-color: #65C6FE;
+  opacity: 1;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 .signUpBtn {
   background: #2BB841;
   margin-right: 54px;
@@ -38,6 +61,8 @@
   text-align: center;
   color: #FFFFFF;
   justify-content: center;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 .btnBox {
