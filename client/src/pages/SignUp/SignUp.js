@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './SignUp.css';
 
 const SignUp = () => {
   const [accountState, setAccountState] = useState({
@@ -10,7 +11,7 @@ const SignUp = () => {
   })
 
   accountState.handleInputChange = event => {
-    setAccountState({ ...accountState, [event.target.name]: event.target.value})
+    setAccountState({ ...accountState, [event.target.name]: event.target.value })
   }
 
   accountState.handleSignUp = event => {
@@ -24,66 +25,75 @@ const SignUp = () => {
   }
 
   return (
-    <>
-    <h1>Create Account</h1>
-    <form action='input'>
-      <p>
-        <label htmlFor='newUsername'>username:</label>
-        <input
-          type='text'
-          name='newUsername'
-          value={accountState.newUsername}
-          onChange={accountState.handleInputChange}
-        />
-      </p>
-      <p>
-        <label htmlFor='realName'>Real Name:</label>
-        <input
-          type='text'
-          name='realName'
-          value={accountState.realName}
-          onChange={accountState.handleInputChange}
-        />
-      </p>
-      <p>
-        <label htmlFor='newPassword'>Password:</label>
-        <input
-          type='password'
-          name='newPassword'
-          value={accountState.newPassword}
-          onChange={accountState.handleInputChange}
-        />
-      </p>
-      <p>
-        <button onClick={accountState.handleSignUp}>SIGN UP!</button>
-      </p>
-    </form>
+    <div className='parent'>
+      <div>
+        <h1>Create Account</h1>
+        <form action='input'>
+          <p>
+            <label htmlFor='newUsername'>username:</label>
+            <input
+              type='text'
+              name='newUsername'
+              value={accountState.newUsername}
+              onChange={accountState.handleInputChange}
+            />
+          </p>
+          <p>
+            <label htmlFor='realName'>Real Name:</label>
+            <input
+              type='text'
+              name='realName'
+              value={accountState.realName}
+              onChange={accountState.handleInputChange}
+            />
+          </p>
+          <p>
+            <label htmlFor='newPassword'>Password:</label>
+            <input
+              type='password'
+              name='newPassword'
+              value={accountState.newPassword}
+              onChange={accountState.handleInputChange}
+            />
+          </p>
+          <p>
+            <button onClick={accountState.handleSignUp}>SIGN UP!</button>
+          </p>
+        </form>
+      </div>
 
-    <h1>Log Into Existing Account</h1>
-    <form action='input'>
-      <p>
-        <label htmlFor='username'>username:</label>
-        <input
-          type='text'
-          name='username'
-          value={accountState.username}
-          onChange={accountState.handleInputChange}
-        />
-      </p>
-      <p>
-        <label htmlFor='password'>Password:</label>
-        <input
-          type='password'
-          name='password'
-          value={accountState.password}
-          onChange={accountState.handleInputChange}
-        />
-      </p>
-      <p>
-        <button onClick={accountState.handleLogIn}>LOG IN!</button>
-      </p>
-    </form>
-    </>
+      <div>
+        <h1>Log Into Existing Account</h1>
+        <form action='input'>
+          <p>
+            <label htmlFor='username'>username:</label>
+            <input
+              type='text'
+              name='username'
+              value={accountState.username}
+              onChange={accountState.handleInputChange}
+            />
+          </p>
+          <p>
+            <label htmlFor='password'>Password:</label>
+            <input
+              type='password'
+              name='password'
+              value={accountState.password}
+              onChange={accountState.handleInputChange}
+            />
+          </p>
+          <p>
+            <button onClick={accountState.handleLogIn}>LOG IN!</button>
+          </p>
+        </form>
+      </div>
+
+      <div className='btnBox'>
+        <button className='signUpBtn loginFont authBtn' onClick={accountState.handleSignUp}>Get Started</button>
+        <button className='loginBtn loginFont authBtn' onClick={accountState.handleLogIn}>LOG IN!</button>
+      </div>
+    </div>
   )
 }
 
