@@ -17,11 +17,13 @@ const SignUp = () => {
   accountState.handleSignUp = event => {
     event.preventDefault()
     console.log(accountState.newUsername, accountState.newPassword, accountState.realName)
+    console.log('SIGN UP!')
   }
 
   accountState.handleLogIn = event => {
     event.preventDefault()
     console.log(accountState.username, accountState.password)
+    console.log('LOG IN!')
   }
 
   return (

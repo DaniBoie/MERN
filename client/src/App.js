@@ -13,7 +13,7 @@ const App = () => {
   return (
     <Router>
       <div>
-        <nav>
+        <nav> 
           <Link to='/'>Sign Up</Link>
           <Link to='/ClassOverview'>Class Overview</Link>
           <Link to='/ClassPage'>Class Page</Link>
